@@ -1,42 +1,43 @@
 package br.com.fiap.spring.dto;
 
-import java.util.Date;
+import java.io.Serializable;
 
-public class AgendamentoDTO {
-    private int idAgendamento;
-    private int idUsuario;
-    private int idProfissionalEspecialidade;
-    private Date dataHoraAgendamento;
+public class AgendamentoDTO implements Serializable {
 
-    public int getIdAgendamento() {
-        return idAgendamento;
+    private String email;
+    private String nomeCliente;
+    private String dataAgendamento;
+    private String especialidade;
+
+    public String getEmail() {
+        return email;
     }
 
-    public void setIdAgendamento(int idAgendamento) {
-        this.idAgendamento = idAgendamento;
+    public void setEmail(String email) {
+        this.email = email;
     }
 
-    public int getIdUsuario() {
-        return idUsuario;
+    public String getNomeCliente() {
+        return nomeCliente;
     }
 
-    public void setIdUsuario(int idUsuario) {
-        this.idUsuario = idUsuario;
+    public void setNomeCliente(String nomeCliente) {
+        this.nomeCliente = nomeCliente;
     }
 
-    public int getIdProfissionalEspecialidade() {
-        return idProfissionalEspecialidade;
+    public String getDataAgendamento() {
+        return dataAgendamento;
     }
 
-    public void setIdProfissionalEspecialidade(int idProfissionalEspecialidade) {
-        this.idProfissionalEspecialidade = idProfissionalEspecialidade;
+    public void setDataAgendamento(String dataAgendamento) {
+        this.dataAgendamento = dataAgendamento;
     }
 
-    public Date getDataHoraAgendamento() {
-        return dataHoraAgendamento;
+    public String getEspecialidade() {
+        return especialidade;
     }
 
-    public void setDataHoraAgendamento(Date dataHoraAgendamento) {
-        this.dataHoraAgendamento = dataHoraAgendamento;
+    public void setEspecialidade(String especialidade) {
+        this.especialidade = especialidade;
     }
 }
